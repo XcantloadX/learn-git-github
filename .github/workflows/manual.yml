@@ -20,6 +20,8 @@ on:
 jobs:
   # This workflow contains a single job called "greet"
   greet:
+    env:
+      working-directory: .
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -29,7 +31,7 @@ jobs:
     - name: Install PHP 7
       run: sudo apt-get install php
     - name: Update conf.php
-      run: ls
+      run: ls ..
     - name: Commit
       run: |
             git add .
