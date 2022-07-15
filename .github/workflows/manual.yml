@@ -30,10 +30,8 @@ jobs:
       run: sudo apt-get install php
     - name: Update conf.php
       run: |
-            cd  ${{ github.workspace }}
-            ls ..
-            ls .
-            php index.php
+            ls
+            php ./index.php
     - name: Commit
       run: |
             git add .
