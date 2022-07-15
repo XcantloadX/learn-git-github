@@ -27,7 +27,7 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Install PHP 7
-      run: sudo apt-install php
+      run: sudo apt-get install php
     - name: Update conf.php
       run: php index.php
     - name: Commit
