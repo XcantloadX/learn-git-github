@@ -29,9 +29,7 @@ jobs:
     - name: Install PHP 7
       run: sudo apt-get install php
     - name: Update conf.php
-      run: |
-            ls
-            php ./index.php
+      run: ls
     - name: Commit
       run: |
             git add .
