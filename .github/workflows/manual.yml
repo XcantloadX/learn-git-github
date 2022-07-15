@@ -26,5 +26,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
-    - name: Send greeting
-      run: echo "Hello ${{ github.event.inputs.name }}"
+    - name: Install PHP 7
+      run: sudo apt-install php
+    - name: Update conf.php
+      run: php index.php
+    - name: Commit
+      run: git stash|
+            git commit
